@@ -11,13 +11,14 @@ import java.util.Set;
 @Entity
 @Setter
 @Getter
-@Table(name = "cliente", schema = "dbo", indexes = {
-        @Index(name = "IX_cliente_telefono", columnList = "telefono")
+@Table(name = "cliente", indexes = {
+        @Index(name = "idx_cliente_telefono", columnList = "telefono")
 })
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private Long idCliente;
 
     @Column(name = "nombre", length = 50 ,nullable = false)
