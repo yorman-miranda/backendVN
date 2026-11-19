@@ -9,8 +9,8 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Permite todos los endpoints
-                .allowedOrigins("http://localhost:4200") // Permite tu frontend
+        registry.addMapping("/**")// Permite todos los endpoints
+                .allowedOrigins("https://tu-proyecto.vercel.app") // Reemplaza con tu dominio real de Vercel
                 .allowedMethods("GET", "POST", "PUT","PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
